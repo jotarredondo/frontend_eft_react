@@ -7,39 +7,53 @@ function Cart({ carrito, eliminarDelCarrito }) {
     )
 
     return (
-        <section id="carrito">
-            <h2>Carrito de compras</h2>
+        <section id="carrito" className="container my-5">
 
-            <p>Total de productos: {carrito.length}</p>
+            <h2 className="text-center mb-4">
+                Carrito de compras
+            </h2>
 
-            {carrito.length === 0 ? (
-                <p>El carrito está vacío.</p>) : (
-                <>
-                    <div className="cart-header">
-                        <span>Producto</span>
-                        <span>Precio</span>
-                        <span>Acción</span>
-                    </div>
+            <p className="text-center">
+                Total de productos: {carrito.length}
+            </p>
 
-                    {carrito.map((producto, index) => (
-                        <div className="cart-item" key={`${producto.id}-${index}`}>
-          <span className="cart-name">
-            {producto.nombre}
-          </span>
-                            <span className="cart-price">
-            ${producto.precioOferta.toLocaleString("es-CL")}
-          </span>
+            {carrito.length === 0 ? (<div className="alert alert-info text-center">El carrito está vacío.</div>) : (
 
-                            <button onClick={() => eliminarDelCarrito(index)}>
-                                Eliminar
-                            </button>
+                <div className="card shadow-sm">
+
+                    <div className="card-body">
+
+                        {carrito.map((producto, index) => (
+
+                            <div
+                                className="row align-items-center border-bottom py-3"
+                                key={`${producto.id}-${index}`}>
+
+                                <div className="col-12 col-md-5">
+                                    <strong>{producto.nombre}</strong>
+                                </div>
+
+                                <div className="col-6 col-md-4">
+                                    ${producto.precioOferta.toLocaleString("es-CL")}
+                                </div>
+
+                                <div className="col-6 col-md-3 text-end">
+                                    <button
+                                        className="btn btn-danger btn-sm"
+                                        onClick={() => eliminarDelCarrito(index)}>
+                                        Eliminar
+                                    </button>
+                                </div>
+                            </div>
+                        ))}
+
+                        <div className="text-end mt-4">
+                            <h3 className="h5">
+                                Total: ${total.toLocaleString("es-CL")}
+                            </h3>
                         </div>
-                    ))}
-
-                    <h3 className="cart-total">
-                        Total: ${total.toLocaleString("es-CL")}
-                    </h3>
-                </>
+                    </div>
+                </div>
             )}
         </section>
     )
