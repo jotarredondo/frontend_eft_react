@@ -3,10 +3,13 @@ import ProductCard from "./ProductCard"
 function ProductList({ productos, carrito, agregarAlCarrito }) {
 
     return (
-        <section id="productos">
-            <h2>Productos destacados</h2>
+        <section id="productos" className="container my-5">
 
-            <div className="product-list">
+            <h2 className="text-center mb-4">
+                Productos destacados
+            </h2>
+
+            <div className="row g-4">
                 {productos.map(producto => (
                     <ProductCard
                         key={producto.id}

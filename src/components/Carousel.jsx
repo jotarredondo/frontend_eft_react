@@ -40,7 +40,7 @@ function Carousel() {
     }
 
     return (
-        <section className="carousel">
+        <section className="gaming-carousel">
             <button
                 className="carousel-btn"
                 onClick={imagenAnterior}

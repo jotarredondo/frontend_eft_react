@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar"
 import Cart from "./components/Cart"
 import Footer from "./components/Footer"
 import Carousel from "./components/Carousel"
+import CategoryFilter from "./components/CategoryFilter"
+import ContactForm from "./components/ContactForm"
 import "./App.css"
 
 function App() {
@@ -14,6 +16,10 @@ function App() {
     const [error, setError] = useState(false)
     // estado carrito
     const [carrito, setCarrito] = useState([])
+    // filter
+    const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("Todos")
+    const productosFiltrados = categoriaSeleccionada === "Todos" ? productos
+            : productos.filter(producto => producto.categoria === categoriaSeleccionada)
 
     // Carga dinámicamente los productos desde el archivo JSON al iniciar la aplicación
     useEffect(() => {
@@ -47,13 +53,12 @@ function App() {
         const nuevoCarrito = carrito.filter(
             (producto, indice) => indice !== index
         )
-
         setCarrito(nuevoCarrito)
     }
 
     return (
         <>
-            <header>
+            <header id="inicio">
                 <h1>Gaming Store</h1>
             </header>
             <Navbar />
@@ -63,14 +68,21 @@ function App() {
             <main>{cargando ? (
                     <p className="mensaje">Cargando productos...</p>) : error ? (
                     <p className="mensaje error">No fue posible cargar los productos.</p>) : (
-                <ProductList
-                    productos={productos}
-                    carrito={carrito}
-                    agregarAlCarrito={agregarAlCarrito}/>
+                <>
+                    <CategoryFilter
+                        categoriaSeleccionada={categoriaSeleccionada}
+                        setCategoriaSeleccionada={setCategoriaSeleccionada}/>
+
+                    <ProductList
+                        productos={productosFiltrados}
+                        carrito={carrito}
+                        agregarAlCarrito={agregarAlCarrito}/>
+                </>
                 )}
 
                 <Cart carrito={carrito} eliminarDelCarrito={eliminarDelCarrito}/>
             </main>
+            <ContactForm />
 
             <Footer />
         </>
