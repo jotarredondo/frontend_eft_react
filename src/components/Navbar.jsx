@@ -1,6 +1,6 @@
 function Navbar() {
     return (
-        <nav className="navbar navbar-expand-md navbar-dark nav-bg">
+        <nav className="navbar navbar-expand-md navbar-dark nav-footer-bg">
             <div className="container">
                 <a className="navbar-brand" href="#">
                     Gaming Store

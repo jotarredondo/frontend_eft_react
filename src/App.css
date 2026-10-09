@@ -17,10 +17,9 @@ header {
   text-align: center;
 }
 
-.nav-bg {
+.nav-footer-bg {
   background-color: #146c43;
 }
-
 
 /* Carrusel personalizado */
 
@@ -88,37 +87,6 @@ main {
 .mensaje.error {
   color: #dc3545;
 }
-
-
-/* Footer */
-
-.footer {
-  margin-top: 3rem;
-  background-color: #146c43;
-  color: white;
-  text-align: center;
-  padding: 1.5rem;
-}
-
-.footer p {
-  margin-bottom: 0.5rem;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.footer-links a {
-  color: white;
-  text-decoration: none;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
 
 /* Mobile */
 
