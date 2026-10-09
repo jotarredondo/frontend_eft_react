@@ -4,7 +4,7 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/gaming_store_react/',
+  base: '/frontend_eft_react/',
 
   plugins: [
     react(),
