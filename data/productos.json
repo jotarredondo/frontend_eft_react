@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "nombre": "PlayStation 5",
+    "precioNormal": 599990,
+    "precioOferta": 549990,
+    "descripcion": "Explora las increíbles posibilidades de juego con PlayStation 5.",
+    "categoria": "Consolas",
+    "imagen": "img/ps5.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Xbox One",
+    "precioNormal": 449990,
+    "precioOferta": 399990,
+    "descripcion": "Juega grandes títulos, franquicias populares y clásicos de Xbox.",
+    "categoria": "Consolas",
+    "imagen": "img/xbox.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Nintendo Switch 2",
+    "precioNormal": 519990,
+    "precioOferta": 469990,
+    "descripcion": "Disfruta tus juegos donde quieras con diferentes modos de juego.",
+    "categoria": "Consolas",
+    "imagen": "img/switch.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "EA Sports FC 26",
+    "precioNormal": 79990,
+    "precioOferta": 69990,
+    "descripcion": "Disfruta de la emoción del fútbol con tus equipos favoritos.",
+    "categoria": "Videojuegos",
+    "imagen": "img/fc26.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Minecraft",
+    "precioNormal": 49990,
+    "precioOferta": 39990,
+    "descripcion": "Explora, construye y crea tu propia aventura.",
+    "categoria": "Videojuegos",
+    "imagen": "img/minecraft.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Mario Kart World",
+    "precioNormal": 89990,
+    "precioOferta": 79990,
+    "descripcion": "Compite con Mario y sus amigos en divertidas carreras.",
+    "categoria": "Videojuegos",
+    "imagen": "img/mariokart.jpg"
+  }
+]
